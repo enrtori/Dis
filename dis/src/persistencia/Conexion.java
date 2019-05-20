@@ -35,4 +35,18 @@ public class Conexion {
             System.err.println(e.getMessage());
         }
     }
+    public static Conexion getInstancia() {
+        if (Conexionuno == null) {
+            Conexionuno = new Conexion();
+        }
+        return Conexionuno;
+    }
+
+    public void cerrarConexion() {
+        try {
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
