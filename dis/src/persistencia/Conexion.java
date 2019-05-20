@@ -9,6 +9,6 @@ package persistencia;
  *
  * @author Dabiz
  */
-public class conexion {
+public class Conexion {
     
 }
