@@ -51,11 +51,11 @@ public class Conexion {
             e.printStackTrace();
         }
     }
-    public ResultSet consultaLogin() {
-        ResultSet results = null;
+    public boolean consultaLogin() {
+        boolean results = false;
         try {
             PreparedStatement pstmt = connection.prepareStatement(Consulta.ENTRADA.toString());
-            results = pstmt.executeQuery();
+            results = pstmt.execute();
         } catch (SQLException sqlExcept) {
             sqlExcept.printStackTrace();
         }

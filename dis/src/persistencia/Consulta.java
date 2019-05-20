@@ -10,7 +10,7 @@ package persistencia;
  * @author enrto
  */
 public  enum Consulta {
-    ENTRADA("CREATE TABLE USER{USUARIO VARCHAR(10) NOT NULL}");
+    ENTRADA("create table ROLEMPLEADO(IdRol SMALLINT not null,NombreRol VARCHAR(20) not null,PRIMARY KEY(IdRol))");
     private final String strConsulta;
     
     private Consulta(String strConsulta) {
