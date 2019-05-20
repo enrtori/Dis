@@ -7,7 +7,9 @@ package dis;
 
 /**
  *
- * @author enrto
+ * @author enrtori
+ * @author luiguti
+ * @author davcuna
  */
 public class Dis {
 
