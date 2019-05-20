@@ -9,6 +9,16 @@ package persistencia;
  *
  * @author enrto
  */
-public class Consulta {
+public  enum Consulta {
+    ENTRADA("CREATE TABLE USER{USUARIO VARCHAR(10) NOT NULL}");
+    private final String strConsulta;
     
+    private Consulta(String strConsulta) {
+        this.strConsulta = strConsulta;
+    }
+
+    @Override
+    public String toString() {
+        return strConsulta;
+    }
 }

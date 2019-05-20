@@ -7,6 +7,8 @@ package persistencia;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -48,5 +50,15 @@ public class Conexion {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+    public ResultSet consultaLogin() {
+        ResultSet results = null;
+        try {
+            PreparedStatement pstmt = connection.prepareStatement(Consulta.ENTRADA.toString());
+            results = pstmt.executeQuery();
+        } catch (SQLException sqlExcept) {
+            sqlExcept.printStackTrace();
+        }
+        return results;
     }
 }
