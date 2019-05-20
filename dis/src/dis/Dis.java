@@ -5,6 +5,8 @@
  */
 package dis;
 
+import persistencia.Conexion;
+
 /**
  *
  * @author enrtori
@@ -17,9 +19,8 @@ public class Dis {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        int a = 5;
-        int b = 4;
+        // llamada a el gestor de interfaz
+        Conexion.getInstancia().consultaLogin();
     }
     
 }
