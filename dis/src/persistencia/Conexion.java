@@ -16,9 +16,9 @@ import java.sql.SQLException;
 public class Conexion {
     private static Conexion Conexionuno;
     private static final String DRIVER_NOMBRE = "org.apache.derby.jdbc.ClientDriver";
-    private static final String DRIVER_URL = "jdbc:derby://localhost:1527/db";
-    private static final String USUARIO = "root";
-    private static final String CONTRASENA = "root";
+    private static final String DRIVER_URL = "jdbc:derby://localhost:1527/dis";
+    private static final String USUARIO = "uruario1";
+    private static final String CONTRASENA = "rio1";
 
     private Connection connection;
     
@@ -30,9 +30,7 @@ public class Conexion {
             System.err.println("Derby driver not found.");
         }
         try{
-            
             connection = DriverManager.getConnection(DRIVER_URL, USUARIO, CONTRASENA);
-            
         }catch(SQLException e){
             System.err.println(e.getMessage());
         }
